@@ -58,4 +58,4 @@ echo ""
 echo "Enter 'exit' to Exit or 'C/c' to continue"
 read exits
 
-done
+
