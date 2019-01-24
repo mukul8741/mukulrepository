@@ -1,0 +1,27 @@
+package com.axelor.workingOne;
+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import com.google.inject.persist.jpa.JpaPersistModule;
+
+public class MainClass {
+	
+	public static void main(String args[]) {
+		
+		Injector inject = Guice.createInjector(new JpaPersistModule("testDB"));
+		
+		TransactionService ts = inject.getInstance(TransactionService.class);
+		
+		Car car = new Car();
+		car.setColour("Red");
+		car.setId(1);
+		car.setName("Lamborgani");
+		car.setPrice(10000000);
+		
+		ts.save(car);
+		
+		System.out.println("Check DataBase");
+		
+	}
+
+}

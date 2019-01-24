@@ -1,0 +1,5 @@
+package com.axelor.pojo;
+
+public class ServiceImpl {
+
+}

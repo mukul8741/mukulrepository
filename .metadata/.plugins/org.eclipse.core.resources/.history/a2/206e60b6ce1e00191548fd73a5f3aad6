@@ -1,0 +1,52 @@
+package com.axelor.workingOne;
+
+import javax.persistence.EntityManager;
+
+import com.google.inject.Guice;
+import com.google.inject.Inject;
+import com.google.inject.Injector;
+import com.google.inject.Singleton;
+import com.google.inject.persist.PersistService;
+import com.google.inject.persist.Transactional;
+import com.google.inject.persist.jpa.JpaPersistModule;
+
+public class MainClass {
+	
+	Injector inject = Guice.createInjector(new JpaPersistModule("testDB"));
+	
+	@Inject
+	public EntityManager em;
+	
+	@Transactional                            /** if we don't write @Transactional then the vale of car obj. will not save in table*/
+    public void save(Car car) {
+        em.persist(car);
+    }
+    
+    
+	public static void main(String args[]) {
+		
+//		MainClass ms = new MainClass();
+		
+		MainClass ts = new MainClass().inject.getInstance(MainClass.class);
+		
+		PersistService ps = ts.inject.getInstance(PersistService.class);
+		ps.start();
+		
+		
+		
+		Car car = new Car();
+		
+		car.setColour("Black");
+//		car.setId(1);                           /* this gives error for deteched entity because of @GeneratedValue on id in Car.class
+		car.setName("Bugati");
+		car.setPrice(50000000);
+		
+		
+		
+		ts.save(car);
+		
+		System.out.println("Check DataBase");
+		
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.axelor.workingOne;
+
+public class Sports implements Car {
+
+	i
+	@Override
+	public String getColour() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

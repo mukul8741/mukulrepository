@@ -1,0 +1,11 @@
+1548053217650	Delete element
+1548054488973	Rename compilation unit 'ServletModule.java'
+1548055515852	Rename type 'ContextListener'
+1548056235837	Delete element
+1548065245983	Move 'web.xml' to 'test'
+1548066063937	Move 'web.xml' to 'WEB-INF'
+1548134712892	Delete element
+1548239696222	Move 'index.html' to 'WEB-INF'
+1548239744478	Move 'index.html' to 'webapp'
+1548239754456	Move 'index.html' to 'resource'
+1548240042462	Move 'index.html' to 'webapp'

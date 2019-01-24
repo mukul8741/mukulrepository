@@ -1,0 +1,20 @@
+<html>
+<body>
+ <form method="get" action="/resource">
+ <table>
+ 
+  <tr>
+   <td>FirstName:</td>
+   <td><input type="text" name="firstname"></td>
+  </tr>
+  
+  <tr>
+   <td>LastName:</td>
+   <td><input type="text" name="lastname"></td>
+  </tr>
+  
+ </table>
+  
+ </form>
+</body>
+</html>

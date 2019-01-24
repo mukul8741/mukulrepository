@@ -1,0 +1,7 @@
+package org.axelor.guice;
+
+public interface Loan {
+	
+	public void amount(int loanAmt);
+
+}

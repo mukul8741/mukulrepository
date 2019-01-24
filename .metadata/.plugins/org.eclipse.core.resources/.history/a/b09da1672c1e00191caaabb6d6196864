@@ -1,0 +1,16 @@
+package com.axelor.workingOne;
+
+import javax.persistence.EntityManager;
+
+import com.google.inject.Inject;
+
+public class TransactionService {
+	
+	@Inject
+	public EntityManager em;
+	
+	Car car;
+	
+	car.setId
+
+}

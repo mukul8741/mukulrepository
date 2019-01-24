@@ -1,0 +1,5 @@
+package org.axelor.webAppUsingServlet;
+
+public class Servlet1 {
+
+}

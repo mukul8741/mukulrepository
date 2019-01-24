@@ -1,0 +1,24 @@
+<html>
+<body>
+ <form method="get" action="/HibernateUsingRestEasy/appmanage/pass/resource">
+ <table>
+ 
+  <tr>
+   <td>FirstName:</td>
+   <td><input type="text" name="firstname"></td>
+  </tr>
+  
+  <tr>
+   <td>LastName:</td>
+   <td><input type="text" name="lastname"></td>
+  </tr>
+  
+  <tr>
+   <td><input type="submit" value="Go"></td>
+  </tr>
+  
+ </table>
+  
+ </form>
+</body>
+</html>

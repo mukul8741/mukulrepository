@@ -1,0 +1,21 @@
+package HibernateService;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DefaultValue;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
+
+@Path("/pass")
+public class NameRegistery {
+	
+	@Path("/resource")
+	@GET
+	@Consumes("application/x-www-form-urlencoded")
+	public void addName(@QueryParam("name") String name, @QueryParam("id") int id, @QueryParam("marks") int marks) {
+		
+	}
+
+}

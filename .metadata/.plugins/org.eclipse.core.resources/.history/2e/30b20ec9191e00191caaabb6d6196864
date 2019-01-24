@@ -1,0 +1,9 @@
+package com.axelor.workingOne;
+
+@Entity
+public interface Car {
+	
+	public String getColour();
+	public String getType();
+
+}

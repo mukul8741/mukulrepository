@@ -1,0 +1,8 @@
+package xmlTypeData;
+
+import javax.ws.rs.ApplicationPath;
+
+@ApplicationPath("/app")
+public class MyApplication {
+
+}

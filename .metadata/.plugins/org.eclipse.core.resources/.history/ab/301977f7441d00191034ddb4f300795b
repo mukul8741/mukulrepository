@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+	<wb-module deploy-name="HibernateUsingRestEasy">
+        <dependent-module archiveName="resteasy-jaxb-provider-3.6.2.Final.jar" deploy-path="/" handle="module:/classpath/lib//home/axelor/Downloads/resteasy-jaxb-provider-3.6.2.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+		<property name="context-root" value="HibernateUsingRestEasy"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/resources"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/java"/>
+		<wb-resource deploy-path="/" source-path="src/main/webapp"/>
+	</wb-module>
+</project-modules>

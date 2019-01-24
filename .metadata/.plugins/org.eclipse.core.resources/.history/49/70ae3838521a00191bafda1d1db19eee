@@ -1,0 +1,19 @@
+package hibernate;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+
+@Path("/pass")
+public class NameRegistery {
+	
+	@Path("/resource")
+	@POST
+	@Consumes("application/x-www-form-urlencoded")
+	public void addName(@FormParam("firstname") String fname, @FormParam("lastname") String lname) {
+		System.out.println(fname + " " + lname);
+	}
+
+}

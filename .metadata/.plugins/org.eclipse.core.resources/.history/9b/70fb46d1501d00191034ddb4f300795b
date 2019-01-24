@@ -1,0 +1,11 @@
+package org.axelor.guice;
+
+public class HouseLoan implements Loan{
+
+	@Override
+	public void amount(int loanAmt) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

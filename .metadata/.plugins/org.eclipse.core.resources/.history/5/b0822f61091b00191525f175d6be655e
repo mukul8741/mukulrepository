@@ -1,0 +1,5 @@
+package hibernatePOJO;
+
+public class Student {
+
+}

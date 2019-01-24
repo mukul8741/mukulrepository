@@ -1,0 +1,336 @@
+10:24:56.360 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [-XX:+HeapDumpOnOutOfMemoryError, -Xmx1024m, -Dfile.encoding=UTF-8, -Duser.country=IN, -Duser.language=en, -Duser.variant]
+10:24:56.503 [INFO] [org.gradle.launcher.daemon.server.health.gc.GarbageCollectionMonitor] Unable to determine a garbage collection monitoring strategy for JVMStrategy{Oracle Corporation version 1.8.0_191}
+10:24:56.566 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=3242df08-a2ef-4611-9649-6cd482b6fa6b,javaHome=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-11.fc29.x86_64/jre,daemonRegistryDir=/home/axelor/eclipse-workspace/WebAppUsingGuice/daemon,pid=2739,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country=IN,-Duser.language=en,-Duser.variant]
+10:24:56.607 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface wlp0s26u1u4
+10:24:56.607 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+10:24:56.613 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? true
+10:24:56.613 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:7609:917:20c4:cfc1%wlp0s26u1u4
+10:24:56.616 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /192.168.1.97
+10:24:56.617 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote multicast interface wlp0s26u1u4
+10:24:56.617 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
+10:24:56.620 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+10:24:56.622 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? false
+10:24:56.622 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /0:0:0:0:0:0:0:1%lo
+10:24:56.623 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+10:24:56.634 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]].
+10:24:56.642 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Wed Jan 23 10:24:56 IST 2019, with address: [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+10:24:56.643 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+10:24:56.644 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=3242df08-a2ef-4611-9649-6cd482b6fa6b,javaHome=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-11.fc29.x86_64/jre,daemonRegistryDir=/home/axelor/eclipse-workspace/WebAppUsingGuice/daemon,pid=2739,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country=IN,-Duser.language=en,-Duser.variant]
+10:24:56.646 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]], context: DefaultDaemonContext[uid=3242df08-a2ef-4611-9649-6cd482b6fa6b,javaHome=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-11.fc29.x86_64/jre,daemonRegistryDir=/home/axelor/eclipse-workspace/WebAppUsingGuice/daemon,pid=2739,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country=IN,-Duser.language=en,-Duser.variant]
+10:24:56.656 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+10:24:56.660 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+10:24:56.668 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+10:24:56.668 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+10:24:56.672 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+10:24:56.677 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /0:0:0:0:0:0:0:1:58116 to /0:0:0:0:0:0:0:1:36465.
+10:24:56.679 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+10:24:56.685 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+10:24:56.697 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+10:24:56.881 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 14: received class org.gradle.launcher.daemon.protocol.Build
+10:24:56.881 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 14: Received non-IO message from client: Build{id=3eacfd08-0d48-48ff-9aa6-18ce17366251.1, currentDir=/home/axelor}
+10:24:56.882 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=3eacfd08-0d48-48ff-9aa6-18ce17366251.1, currentDir=/home/axelor}.
+10:24:56.882 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=3eacfd08-0d48-48ff-9aa6-18ce17366251.1, currentDir=/home/axelor} with connection: socket connection from /0:0:0:0:0:0:0:1:36465 to /0:0:0:0:0:0:0:1:58116.
+10:24:56.889 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=3eacfd08-0d48-48ff-9aa6-18ce17366251.1, currentDir=/home/axelor}, connection = DefaultDaemonConnection: socket connection from /0:0:0:0:0:0:0:1:36465 to /0:0:0:0:0:0:0:1:58116] after 0.0 minutes of idle
+10:24:56.890 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+10:24:56.893 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+10:24:56.894 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+10:24:56.895 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+10:24:56.902 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+10:24:56.902 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+10:24:56.902 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+10:24:56.904 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=3eacfd08-0d48-48ff-9aa6-18ce17366251.1, currentDir=/home/axelor}. Dispatching build started information...
+10:24:56.904 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 16: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
+10:24:56.912 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/home/axelor/bin:/home/axelor/.local/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin, XAUTHORITY=/run/user/1000/gdm/Xauthority, HISTCONTROL=ignoredups, XMODIFIERS=@im=ibus, GDMSESSION=gnome-xorg, XDG_DATA_DIRS=/home/axelor/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/, MODULEPATH=/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles, DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus, XDG_CURRENT_DESKTOP=GNOME, MAIL=/var/spool/mail/axelor, SSH_AGENT_PID=1548, SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1522,unix/unix:/tmp/.ICE-unix/1522, USERNAME=axelor, LOGNAME=axelor, PWD=/home/axelor, GJS_DEBUG_TOPICS=JS ERROR;JS LOG, LESSOPEN=||/usr/bin/lesspipe.sh %s, SHELL=/bin/bash, BASH_ENV=/usr/share/Modules/init/bash, GIO_LAUNCHED_DESKTOP_FILE=/home/axelor/.local/share/applications/eclipse.desktop, BASH_FUNC_scl%%=() {  if [ "$1" = "load" -o "$1" = "unload" ]; then
+ eval "module $@";
+ else
+ /usr/bin/scl "$@";
+ fi
+}, GDK_SCALE=1, MODULEPATH_modshare=/usr/share/modulefiles:1:/usr/share/Modules/modulefiles:1:/etc/modulefiles:1, XDG_SESSION_DESKTOP=gnome-xorg, SHLVL=2, OXYGEN_DISABLE_INNER_SHADOWS_HACK=1, LOADEDMODULES=, QT_IM_MODULE=ibus, HISTSIZE=1000, ENV=/usr/share/Modules/init/profile.sh, LANG=en_IN.UTF-8, XDG_SESSION_TYPE=x11, XDG_SESSION_ID=2, MODULES_RUN_QUARANTINE=LD_LIBRARY_PATH, BASH_FUNC_switchml%%=() {  typeset swfound=1;
+ if [ "${MODULES_USE_COMPAT_VERSION:-0}" = '1' ]; then
+ typeset swname='main';
+ if [ -e /usr/share/Modules/libexec/modulecmd.tcl ]; then
+ typeset swfound=0;
+ unset MODULES_USE_COMPAT_VERSION;
+ fi;
+ else
+ typeset swname='compatibility';
+ if [ -e /usr/share/Modules/libexec/modulecmd-compat ]; then
+ typeset swfound=0;
+ MODULES_USE_COMPAT_VERSION=1;
+ export MODULES_USE_COMPAT_VERSION;
+ fi;
+ fi;
+ if [ $swfound -eq 0 ]; then
+ echo "Switching to Modules $swname version";
+ source /usr/share/Modules/init/bash;
+ else
+ echo "Cannot switch to Modules $swname version, command not found";
+ return 1;
+ fi
+}, DISPLAY=:0, BASH_FUNC_module%%=() {  unset _mlshdbg;
+ if [ "${MODULES_SILENT_SHELL_DEBUG:-0}" = '1' ]; then
+ case "$-" in 
+ *v*x*)
+ set +vx;
+ _mlshdbg='vx'
+ ;;
+ *v*)
+ set +v;
+ _mlshdbg='v'
+ ;;
+ *x*)
+ set +x;
+ _mlshdbg='x'
+ ;;
+ *)
+ _mlshdbg=''
+ ;;
+ esac;
+ fi;
+ unset _mlre _mlIFS;
+ if [ -n "${IFS+x}" ]; then
+ _mlIFS=$IFS;
+ fi;
+ IFS=' ';
+ for _mlv in ${MODULES_RUN_QUARANTINE:-};
+ do
+ if [ "${_mlv}" = "${_mlv##*[!A-Za-z0-9_]}" -a "${_mlv}" = "${_mlv#[0-9]}" ]; then
+ if [ -n "`eval 'echo ${'$_mlv'+x}'`" ]; then
+ _mlre="${_mlre:-}${_mlv}_modquar='`eval 'echo ${'$_mlv'}'`' ";
+ fi;
+ _mlrv="MODULES_RUNENV_${_mlv}";
+ _mlre="${_mlre:-}${_mlv}='`eval 'echo ${'$_mlrv':-}'`' ";
+ fi;
+ done;
+ if [ -n "${_mlre:-}" ]; then
+ eval `eval ${_mlre}/usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash '"$@"'`;
+ else
+ eval `/usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash "$@"`;
+ fi;
+ _mlstatus=$?;
+ if [ -n "${_mlIFS+x}" ]; then
+ IFS=$_mlIFS;
+ else
+ unset IFS;
+ fi;
+ unset _mlre _mlv _mlrv _mlIFS;
+ if [ -n "${_mlshdbg:-}" ]; then
+ set -$_mlshdbg;
+ fi;
+ unset _mlshdbg;
+ return $_mlstatus
+}, _=/home/axelor/opt/eclipse/eclipse, GDM_LANG=en_IN.UTF-8, LIBOVERLAY_SCROLLBAR=0, GDK_CORE_DEVICE_EVENTS=1, DESKTOP_SESSION=gnome-xorg, USER=axelor, XDG_MENU_PREFIX=gnome-, GIO_LAUNCHED_DESKTOP_FILE_PID=2573, WINDOWPATH=2, GJS_DEBUG_OUTPUT=stderr, XDG_SEAT=seat0, SSH_AUTH_SOCK=/run/user/1000/keyring/ssh, GTK_OVERLAY_SCROLLING=0, HOSTNAME=localhost.localdomain, MODULESHOME=/usr/share/Modules, MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl, XDG_RUNTIME_DIR=/run/user/1000, XDG_VTNR=2, HOME=/home/axelor}
+10:24:56.942 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+10:24:56.943 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 2739). The daemon log file: /home/axelor/eclipse-workspace/WebAppUsingGuice/daemon/4.3/daemon-2739.out.log
+10:24:56.945 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon [memory: 954.7 MB]
+10:24:56.963 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+10:24:56.965 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=3242df08-a2ef-4611-9649-6cd482b6fa6b,javaHome=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-11.fc29.x86_64/jre,daemonRegistryDir=/home/axelor/eclipse-workspace/WebAppUsingGuice/daemon,pid=2739,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country=IN,-Duser.language=en,-Duser.variant]
+
+CONFIGURE SUCCESSFUL in 11s
+10:25:07.198 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+10:25:07.207 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+10:25:07.208 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=3eacfd08-0d48-48ff-9aa6-18ce17366251.1, currentDir=/home/axelor}, connection = DefaultDaemonConnection: socket connection from /0:0:0:0:0:0:0:1:36465 to /0:0:0:0:0:0:0:1:58116]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@9271365 with state Busy
+10:25:07.208 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=3eacfd08-0d48-48ff-9aa6-18ce17366251.1, currentDir=/home/axelor}, connection = DefaultDaemonConnection: socket connection from /0:0:0:0:0:0:0:1:36465 to /0:0:0:0:0:0:0:1:58116]
+10:25:07.208 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+10:25:07.209 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as idle, address: [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+10:25:07.209 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+10:25:07.209 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+10:25:07.210 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+10:25:07.211 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+10:25:07.212 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+10:25:07.212 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: Success[value=org.gradle.tooling.internal.provider.BuildActionResult@259fc92c]
+10:25:07.212 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 13: dispatching class org.gradle.launcher.daemon.protocol.Success
+10:25:07.269 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=3eacfd08-0d48-48ff-9aa6-18ce17366251.1, currentDir=/home/axelor}
+10:25:07.477 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 14: received class org.gradle.launcher.daemon.protocol.CloseInput
+10:25:07.477 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 14: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@4e58210f
+10:25:07.495 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 14: received class org.gradle.launcher.daemon.protocol.Finished
+10:25:07.496 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 14: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@208b3460
+10:25:07.497 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+10:25:07.497 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 14: received null
+10:25:07.497 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 14: Received end-of-input from client.
+10:25:07.497 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@208b3460
+10:25:07.499 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 13: stopping connection
+10:25:07.507 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 13: stopping connection
+10:25:10.924 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /0:0:0:0:0:0:0:1:58186 to /0:0:0:0:0:0:0:1:36465.
+10:25:10.942 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 25: received class org.gradle.launcher.daemon.protocol.Build
+10:25:10.942 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 25: Received non-IO message from client: Build{id=10801094-ae14-40b5-9e1e-5192a4ef900e.1, currentDir=/home/axelor}
+10:25:10.942 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=10801094-ae14-40b5-9e1e-5192a4ef900e.1, currentDir=/home/axelor}.
+10:25:10.943 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=10801094-ae14-40b5-9e1e-5192a4ef900e.1, currentDir=/home/axelor} with connection: socket connection from /0:0:0:0:0:0:0:1:36465 to /0:0:0:0:0:0:0:1:58186.
+10:25:10.943 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=10801094-ae14-40b5-9e1e-5192a4ef900e.1, currentDir=/home/axelor}, connection = DefaultDaemonConnection: socket connection from /0:0:0:0:0:0:0:1:36465 to /0:0:0:0:0:0:0:1:58186] after 0.0 minutes of idle
+10:25:10.944 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+10:25:10.944 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+10:25:10.944 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+10:25:10.944 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+10:25:10.945 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+10:25:10.946 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+10:25:10.946 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+10:25:10.946 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=10801094-ae14-40b5-9e1e-5192a4ef900e.1, currentDir=/home/axelor}. Dispatching build started information...
+10:25:10.946 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 16: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
+10:25:10.947 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/home/axelor/bin:/home/axelor/.local/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin, XAUTHORITY=/run/user/1000/gdm/Xauthority, HISTCONTROL=ignoredups, XMODIFIERS=@im=ibus, GDMSESSION=gnome-xorg, XDG_DATA_DIRS=/home/axelor/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/, MODULEPATH=/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles, DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus, XDG_CURRENT_DESKTOP=GNOME, MAIL=/var/spool/mail/axelor, SSH_AGENT_PID=1548, SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1522,unix/unix:/tmp/.ICE-unix/1522, USERNAME=axelor, LOGNAME=axelor, PWD=/home/axelor, GJS_DEBUG_TOPICS=JS ERROR;JS LOG, LESSOPEN=||/usr/bin/lesspipe.sh %s, SHELL=/bin/bash, BASH_ENV=/usr/share/Modules/init/bash, GIO_LAUNCHED_DESKTOP_FILE=/home/axelor/.local/share/applications/eclipse.desktop, BASH_FUNC_scl%%=() {  if [ "$1" = "load" -o "$1" = "unload" ]; then
+ eval "module $@";
+ else
+ /usr/bin/scl "$@";
+ fi
+}, GDK_SCALE=1, MODULEPATH_modshare=/usr/share/modulefiles:1:/usr/share/Modules/modulefiles:1:/etc/modulefiles:1, XDG_SESSION_DESKTOP=gnome-xorg, SHLVL=2, OXYGEN_DISABLE_INNER_SHADOWS_HACK=1, LOADEDMODULES=, QT_IM_MODULE=ibus, HISTSIZE=1000, ENV=/usr/share/Modules/init/profile.sh, LANG=en_IN.UTF-8, XDG_SESSION_TYPE=x11, XDG_SESSION_ID=2, MODULES_RUN_QUARANTINE=LD_LIBRARY_PATH, BASH_FUNC_switchml%%=() {  typeset swfound=1;
+ if [ "${MODULES_USE_COMPAT_VERSION:-0}" = '1' ]; then
+ typeset swname='main';
+ if [ -e /usr/share/Modules/libexec/modulecmd.tcl ]; then
+ typeset swfound=0;
+ unset MODULES_USE_COMPAT_VERSION;
+ fi;
+ else
+ typeset swname='compatibility';
+ if [ -e /usr/share/Modules/libexec/modulecmd-compat ]; then
+ typeset swfound=0;
+ MODULES_USE_COMPAT_VERSION=1;
+ export MODULES_USE_COMPAT_VERSION;
+ fi;
+ fi;
+ if [ $swfound -eq 0 ]; then
+ echo "Switching to Modules $swname version";
+ source /usr/share/Modules/init/bash;
+ else
+ echo "Cannot switch to Modules $swname version, command not found";
+ return 1;
+ fi
+}, DISPLAY=:0, BASH_FUNC_module%%=() {  unset _mlshdbg;
+ if [ "${MODULES_SILENT_SHELL_DEBUG:-0}" = '1' ]; then
+ case "$-" in 
+ *v*x*)
+ set +vx;
+ _mlshdbg='vx'
+ ;;
+ *v*)
+ set +v;
+ _mlshdbg='v'
+ ;;
+ *x*)
+ set +x;
+ _mlshdbg='x'
+ ;;
+ *)
+ _mlshdbg=''
+ ;;
+ esac;
+ fi;
+ unset _mlre _mlIFS;
+ if [ -n "${IFS+x}" ]; then
+ _mlIFS=$IFS;
+ fi;
+ IFS=' ';
+ for _mlv in ${MODULES_RUN_QUARANTINE:-};
+ do
+ if [ "${_mlv}" = "${_mlv##*[!A-Za-z0-9_]}" -a "${_mlv}" = "${_mlv#[0-9]}" ]; then
+ if [ -n "`eval 'echo ${'$_mlv'+x}'`" ]; then
+ _mlre="${_mlre:-}${_mlv}_modquar='`eval 'echo ${'$_mlv'}'`' ";
+ fi;
+ _mlrv="MODULES_RUNENV_${_mlv}";
+ _mlre="${_mlre:-}${_mlv}='`eval 'echo ${'$_mlrv':-}'`' ";
+ fi;
+ done;
+ if [ -n "${_mlre:-}" ]; then
+ eval `eval ${_mlre}/usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash '"$@"'`;
+ else
+ eval `/usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash "$@"`;
+ fi;
+ _mlstatus=$?;
+ if [ -n "${_mlIFS+x}" ]; then
+ IFS=$_mlIFS;
+ else
+ unset IFS;
+ fi;
+ unset _mlre _mlv _mlrv _mlIFS;
+ if [ -n "${_mlshdbg:-}" ]; then
+ set -$_mlshdbg;
+ fi;
+ unset _mlshdbg;
+ return $_mlstatus
+}, _=/home/axelor/opt/eclipse/eclipse, GDM_LANG=en_IN.UTF-8, LIBOVERLAY_SCROLLBAR=0, GDK_CORE_DEVICE_EVENTS=1, DESKTOP_SESSION=gnome-xorg, USER=axelor, XDG_MENU_PREFIX=gnome-, GIO_LAUNCHED_DESKTOP_FILE_PID=2573, WINDOWPATH=2, GJS_DEBUG_OUTPUT=stderr, XDG_SEAT=seat0, SSH_AUTH_SOCK=/run/user/1000/keyring/ssh, GTK_OVERLAY_SCROLLING=0, HOSTNAME=localhost.localdomain, MODULESHOME=/usr/share/Modules, MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl, XDG_RUNTIME_DIR=/run/user/1000, XDG_VTNR=2, HOME=/home/axelor}
+10:25:10.953 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+10:25:10.953 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 2739). The daemon log file: /home/axelor/eclipse-workspace/WebAppUsingGuice/daemon/4.3/daemon-2739.out.log
+10:25:10.960 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting 2nd build in daemon [uptime: 14.47 secs, performance: 94%]
+10:25:10.961 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+10:25:10.961 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=3242df08-a2ef-4611-9649-6cd482b6fa6b,javaHome=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-11.fc29.x86_64/jre,daemonRegistryDir=/home/axelor/eclipse-workspace/WebAppUsingGuice/daemon,pid=2739,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country=IN,-Duser.language=en,-Duser.variant]
+
+CONFIGURE SUCCESSFUL in 0s
+10:25:11.990 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+10:25:12.003 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Lock on file hash cache (/home/axelor/eclipse-workspace/WebAppUsingGuice/caches/4.3/fileHashes) requested by another process - releasing lock.
+10:25:12.004 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for file hash cache (/home/axelor/eclipse-workspace/WebAppUsingGuice/caches/4.3/fileHashes)
+10:25:12.004 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileHashes.bin (/home/axelor/eclipse-workspace/WebAppUsingGuice/caches/4.3/fileHashes/fileHashes.bin)
+10:25:12.005 [DEBUG] [org.gradle.process.internal.health.memory.MemoryManager] Emitting OS memory status event {Total: 8187150336, Free: 4893589504}
+10:25:12.005 [DEBUG] [org.gradle.launcher.daemon.server.health.LowMemoryDaemonExpirationStrategy] Received memory status update: {Total: 8187150336, Free: 4893589504}
+10:25:12.006 [DEBUG] [org.gradle.process.internal.health.memory.MemoryManager] Emitting JVM memory status event {Maximum: 954728448, Committed: 266862592}
+10:25:12.004 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+10:25:12.009 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on file hash cache (/home/axelor/eclipse-workspace/WebAppUsingGuice/caches/4.3/fileHashes).
+10:25:12.013 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=10801094-ae14-40b5-9e1e-5192a4ef900e.1, currentDir=/home/axelor}, connection = DefaultDaemonConnection: socket connection from /0:0:0:0:0:0:0:1:36465 to /0:0:0:0:0:0:0:1:58186]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@9271365 with state Busy
+10:25:12.013 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=10801094-ae14-40b5-9e1e-5192a4ef900e.1, currentDir=/home/axelor}, connection = DefaultDaemonConnection: socket connection from /0:0:0:0:0:0:0:1:36465 to /0:0:0:0:0:0:0:1:58186]
+10:25:12.013 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+10:25:12.019 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as idle, address: [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+10:25:12.019 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+10:25:12.019 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+10:25:12.020 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+10:25:12.021 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+10:25:12.021 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: Success[value=org.gradle.tooling.internal.provider.BuildActionResult@1eb834f3]
+10:25:12.021 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 13: dispatching class org.gradle.launcher.daemon.protocol.Success
+10:25:12.024 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+10:25:12.027 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=10801094-ae14-40b5-9e1e-5192a4ef900e.1, currentDir=/home/axelor}
+10:25:12.072 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 25: received class org.gradle.launcher.daemon.protocol.CloseInput
+10:25:12.072 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 25: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@aae955
+10:25:12.081 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 25: received class org.gradle.launcher.daemon.protocol.Finished
+10:25:12.082 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 25: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@e6d1730
+10:25:12.082 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+10:25:12.082 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 25: received null
+10:25:12.082 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 25: Received end-of-input from client.
+10:25:12.082 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: null
+10:25:12.083 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 13: stopping connection
+10:25:12.085 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 13: stopping connection
+10:25:16.682 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] DaemonExpirationPeriodicCheck running
+10:25:16.682 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+10:25:16.682 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+10:25:16.683 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+10:25:16.683 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+10:25:16.684 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+10:25:16.684 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+10:25:17.004 [DEBUG] [org.gradle.process.internal.health.memory.MemoryManager] Emitting OS memory status event {Total: 8187150336, Free: 4732039168}
+10:25:17.004 [DEBUG] [org.gradle.launcher.daemon.server.health.LowMemoryDaemonExpirationStrategy] Received memory status update: {Total: 8187150336, Free: 4732039168}
+10:25:17.004 [DEBUG] [org.gradle.process.internal.health.memory.MemoryManager] Emitting JVM memory status event {Maximum: 954728448, Committed: 266862592}
+10:25:22.005 [DEBUG] [org.gradle.process.internal.health.memory.MemoryManager] Emitting OS memory status event {Total: 8187150336, Free: 4561158144}
+10:25:22.005 [DEBUG] [org.gradle.launcher.daemon.server.health.LowMemoryDaemonExpirationStrategy] Received memory status update: {Total: 8187150336, Free: 4561158144}
+10:25:22.005 [DEBUG] [org.gradle.process.internal.health.memory.MemoryManager] Emitting JVM memory status event {Maximum: 954728448, Committed: 266862592}
+10:25:26.682 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] DaemonExpirationPeriodicCheck running
+10:25:26.682 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+10:25:26.682 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+10:25:26.682 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+10:25:26.683 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+10:25:26.683 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+10:25:26.683 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+10:25:26.684 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+10:25:26.684 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+10:25:26.684 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+10:25:26.689 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+10:25:26.690 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+10:25:26.690 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+10:25:26.691 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Storing daemon stop event: other compatible daemons were started and after being idle for 0 minutes and not recently used
+10:25:26.692 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon stop event with timestamp 1548219326692
+10:25:26.692 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+10:25:26.697 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+10:25:26.698 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+10:25:26.698 [LIFECYCLE] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon will be stopped at the end of the build other compatible daemons were started and after being idle for 0 minutes and not recently used
+10:25:26.698 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Marking daemon stopped due to other compatible daemons were started and after being idle for 0 minutes and not recently used. The daemon is running a build: false
+10:25:26.699 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon has stopped.
+10:25:26.699 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stop() called on daemon
+10:25:26.699 [INFO] [org.gradle.launcher.daemon.server.Daemon] Stop requested. Daemon is removing its presence from the registry...
+10:25:26.699 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Removing our presence to clients, eg. removing this address from the registry: [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+10:25:26.699 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+10:25:26.700 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+10:25:26.700 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+10:25:26.701 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+10:25:26.701 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Address removed from registry.
+10:25:26.707 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for jars (/home/axelor/eclipse-workspace/WebAppUsingGuice/caches/jars-3)
+10:25:26.707 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on jars (/home/axelor/eclipse-workspace/WebAppUsingGuice/caches/jars-3).
+10:25:26.708 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache file hash cache (/home/axelor/eclipse-workspace/WebAppUsingGuice/caches/4.3/fileHashes) was closed 4 times.
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.
+10:25:26.725 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [3eabddbd-d53c-474a-a43d-6103c1238879 port:36465, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+10:25:26.725 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+10:25:26.725 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+10:25:26.726 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
