@@ -1,8 +1,12 @@
 package org.axelor.phonebook.pojo;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Namefor {
@@ -11,10 +15,10 @@ public class Namefor {
 	@GeneratedValue
 	int id;
 	
-	int userID;
-	int connectUserId;
-	
 	String name;
+	
+	@OneToMany(cascade = CascadeType.ALL)
+	List<MobileNo> number;
 
 	public int getId() {
 		return id;
@@ -24,22 +28,6 @@ public class Namefor {
 		this.id = id;
 	}
 
-	public int getUserID() {
-		return userID;
-	}
-
-	public void setUserID(int userID) {
-		this.userID = userID;
-	}
-
-	public int getConnectUserId() {
-		return connectUserId;
-	}
-
-	public void setConnectUserId(int connectUserId) {
-		this.connectUserId = connectUserId;
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -47,6 +35,15 @@ public class Namefor {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public List<MobileNo> getNumber() {
+		return number;
+	}
+
+	public void setNumber(List<MobileNo> number) {
+		this.number = number;
+	}
+
 	
 	
 	
