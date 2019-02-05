@@ -5,7 +5,6 @@ import javax.persistence.CascadeType;
 import java.util.List;
 
 import javax.persistence.*;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Student {

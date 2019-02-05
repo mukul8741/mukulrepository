@@ -30,6 +30,7 @@ public class RestEasyServiceClass {
 	@Path("save")
 	@Consumes("application/x-www-form-urlencoded")
 	
+	
 	/**
 	 * The below method should be public other "not found error" will come...
 	 */
@@ -38,6 +39,8 @@ public class RestEasyServiceClass {
 			throws IOException {
 		
 //	    Response response;
+		
+		
 		
 		Injector injector = Guice.createInjector(new JpaPersistModule("testDB"));
 		
@@ -65,7 +68,9 @@ public class RestEasyServiceClass {
 		
 //		resp.getWriter().println("Done");
 		
-//		try {
+//		try {@JoinTable( name = "stud_join_game",
+//        joinColumns= @JoinColumn(name = "stdid", referencedColumnName = "id"),
+//        inverseJoinColumns = @JoinColumn(name = "Gameid", referencedColumnName = "id"))
 //			resp.sendRedirect("http://localhost:8080/RestEasyGuiceHibernate/index1.html");
 //		} catch (Exception e) {
 //			// TODO Auto-generated catch block

@@ -33,7 +33,7 @@ public class StoreData {
         b1.setBookid(11);
         b1.setBookname("Science");
         
-        List<Book> bok1 = new ArrayList();
+        List<Book> bok1 = new ArrayList<Book>();
         bok1.add(b1);
         
         Student stud1 = new Student();

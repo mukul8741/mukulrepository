@@ -10,7 +10,8 @@
 <booleanAttribute key="show_console_view" value="true"/>
 <booleanAttribute key="show_execution_view" value="true"/>
 <listAttribute key="tasks">
-<listEntry value="tomcatRun"/>
+<listEntry value="./gradlew"/>
+<listEntry value="appRun"/>
 </listAttribute>
-<stringAttribute key="working_dir" value="${workspace_loc:/HibernateUsingRestEasy}"/>
+<stringAttribute key="working_dir" value="/home/axelor/eclipse-workspace/MultiPartWithRest"/>
 </launchConfiguration>

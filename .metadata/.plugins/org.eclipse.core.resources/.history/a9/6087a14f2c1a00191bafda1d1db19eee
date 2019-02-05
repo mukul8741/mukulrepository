@@ -1,5 +1,0 @@
-package com.javacodegeeks.enterprise.rest.resteasy;
-
-public class RESTEasyHelloWorldService {
-
-}

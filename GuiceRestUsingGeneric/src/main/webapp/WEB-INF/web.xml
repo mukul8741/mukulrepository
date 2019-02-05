@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    		
+	<context-param>
+        <param-name>resteasy.guice.modules</param-name>
+        <param-value>org.axelor.rest.modules.GuiceGenericModule</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>
+            org.jboss.resteasy.plugins.guice.GuiceResteasyBootstrapServletContextListener
+        </listener-class>
+    </listener>
+
+</web-app>

@@ -1,0 +1,19 @@
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'eclipse'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+
+    runtime 'org.jboss.resteasy:resteasy-jaxrs:3.0.4.Final'
+    runtime 'org.jboss.resteasy:resteasy-jaxb-provider:3.0.4.Final'          //for XML Marshling and Unmarshling.
+    runtime 'org.jboss.resteasy:resteasy-servlet-initializer:3.0.4.Final'
+    
+    runtime 'org.jboss.resteasy:resteasy-jackson-provider:3.0.4.Final'       //for JSON biniding or marshling and unmarshling
+    runtime 'org.jboss.resteasy:resteasy-multipart-provider:3.0.4.Final'
+    
+}
+

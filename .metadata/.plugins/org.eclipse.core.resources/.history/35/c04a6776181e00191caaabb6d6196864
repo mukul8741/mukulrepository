@@ -1,7 +1,0 @@
-package com.axelor.workingOne;
-
-public interface Car {
-	
-	public String getColour();
-
-}

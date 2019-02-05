@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="org.axelor.Guice"/>
 			<item value="com.javacodegeeks.enterprise.rest.resteasy"/>
 			<item value="com.javacodegeeks.example"/>
 		</list>
 		<list key="name">
+			<item value="restGuiceMaveen"/>
 		</list>
 		<list key="artifactId">
+			<item value="guiceRest"/>
 			<item value="JAXRS-RESTEasy"/>
 			<item value="hibernate-eclipse-postgresql12"/>
 			<item value="hibernate-eclipse-postgresql"/>
@@ -75,6 +78,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/home/axelor/eclipse-workspace/GuiceWithRestEasy/src/main/java/org/axelor/RestGuice/RestEasyImpl.java"/>
 			<item value="/home/axelor/eclipse-workspace/RestEasy"/>
 			<item value="/home/axelor/eclipse-workspace/hibernate-eclipse-postgresql/src/main/java/org/example/Main_class.java"/>
 			<item value="/home/axelor/eclipse-workspace/hibernate-eclipse-postgresql "/>

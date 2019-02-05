@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+apply plugin: 'application'
+
+mainClassName = 'org/axelor/guice/Main/MainClass'
+
+repositories {
+    jcenter()
+}
+
+dependencies { 
+
+        compile group: 'com.google.inject', name: 'guice', version: '4.2.2'
+
+}
+

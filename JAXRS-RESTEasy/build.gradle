@@ -10,7 +10,7 @@ repositories {
 
 dependencies {
     
-implementation 'org.jboss.resteasy:resteasy-jaxrs:3.0.4.Final'
+runtime 'org.jboss.resteasy:resteasy-jaxrs:3.0.4.Final'
 implementation 'org.jboss.resteasy:resteasy-jaxb-provider:3.0.4.Final'
     
 }

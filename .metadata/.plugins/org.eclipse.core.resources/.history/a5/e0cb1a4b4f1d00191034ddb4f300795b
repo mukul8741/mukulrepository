@@ -1,9 +1,0 @@
-package org.axelor.guice;
-
-import javax.servlet.http.HttpServlet;
-
-public class ServletTest extends HttpServlet{
-	
-	protected void doGet
-
-}

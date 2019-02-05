@@ -16,7 +16,7 @@ dependencies {
     
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
     implementation 'org.jboss.resteasy:resteasy-jaxrs:3.0.4.Final'
-    implementation 'org.jboss.resteasy:resteasy-servlet-initializer:3.0.4.Final'
+    runtime 'org.jboss.resteasy:resteasy-servlet-initializer:3.0.4.Final'
     implementation 'org.jboss.resteasy:resteasy-jaxb-provider:3.0.4.Final'
     
     compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.0.Final'

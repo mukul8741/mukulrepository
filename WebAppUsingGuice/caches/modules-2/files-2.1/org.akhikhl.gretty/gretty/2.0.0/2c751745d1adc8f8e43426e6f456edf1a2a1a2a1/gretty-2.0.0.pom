@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.akhikhl.gretty</groupId>
+  <artifactId>gretty</artifactId>
+  <version>2.0.0</version>
+  <name>gretty</name>
+  <description>Advanced gradle plugin for running web-apps on jetty and tomcat</description>
+  <url>https://github.com/akhikhl/gretty</url>
+  <licenses>
+    <license>
+      <name>The MIT License</name>
+      <url>https://raw.github.com/akhikhl/gretty/master/LICENSE</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>akhikhl</id>
+      <name>Andrey Hihlovskiy</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git@github.com:akhikhl/gretty.git</connection>
+    <developerConnection>scm:git@github.com:akhikhl/gretty.git</developerConnection>
+    <url>scm:git@github.com:akhikhl/gretty.git</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>org.akhikhl.gretty</groupId>
+      <artifactId>gretty-core</artifactId>
+      <version>2.0.0</version>
+      <scope>compile</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>logback-classic</artifactId>
+          <groupId>ch.qos.logback</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>groovy-all</artifactId>
+          <groupId>org.codehaus.groovy</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-loader-tools</artifactId>
+      <version>1.5.4.RELEASE</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-util</artifactId>
+      <version>8.1.8.v20121106</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+      <version>2.4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.spockframework</groupId>
+      <artifactId>spock-core</artifactId>
+      <version>1.1-groovy-2.4</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>

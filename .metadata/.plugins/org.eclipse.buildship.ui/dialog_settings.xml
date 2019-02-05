@@ -6,6 +6,6 @@
 	<section name="org.eclipse.buildship.ui.wizard.project.creation">
 		<item value="true" key="use_default_location"/>
 		<item value="false" key="auto_sync"/>
-		<item value="/home/axelor/eclipse-workspace/HibernateWithGuice" key="project_location"/>
+		<item value="/home/axelor/eclipse-workspace/TestingGuiceRest1" key="project_location"/>
 	</section>
 </section>

@@ -22,8 +22,6 @@ public class StoreData {
 		
 		CarService carService = injector.getInstance(CarService.class);
 		
-		carService.car.set
-		
 	}
 	
 }

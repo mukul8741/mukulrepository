@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+      <welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+		
+	<listener>
+  		<listener-class>org.axelor.rest.modules.GuiceGenericModule</listener-class>
+	</listener>
+
+    <context-param>
+        <param-name>resteasy.guice.modules</param-name>
+        <param-value>org.axelor.rest.modules.BindingModule</param-value>
+    </context-param>
+
+	<context-param>
+        <param-name>resteasy.media.type.mappings</param-name>
+        <param-value>html : text/html, json : application/json, xml : application/xml</param-value>
+    </context-param>
+
+   <context-param>
+        <param-name>resteasy.language.mappings</param-name>
+        <param-value>en : en-US, es : es, fr : fr</param-value>
+   </context-param>
+
+</web-app>

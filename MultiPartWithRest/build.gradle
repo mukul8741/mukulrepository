@@ -1,0 +1,20 @@
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'eclipse'
+
+repositories {
+    jcenter()
+}
+
+dependencies { 
+    
+    implementation 'org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final'
+    runtime 'org.jboss.resteasy:resteasy-servlet-initializer:3.6.2.Final'
+    implementation 'org.jboss.resteasy:resteasy-jaxb-provider:3.6.2.Final'    
+    compile 'org.jboss.resteasy:resteasy-multipart-provider:3.6.2.Final'
+    
+    
+}
+
+
+
