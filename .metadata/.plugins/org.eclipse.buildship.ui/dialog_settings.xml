@@ -5,7 +5,10 @@
 	</section>
 	<section name="org.eclipse.buildship.ui.wizard.project.creation">
 		<item value="true" key="use_default_location"/>
+		<item value="false" key="apply_working_sets"/>
 		<item value="false" key="auto_sync"/>
-		<item value="/home/axelor/eclipse-workspace/TestingGuiceRest1" key="project_location"/>
+		<item value="/home/axelor/eclipse-workspace/BankModuleTest" key="project_location"/>
+		<list key="working_sets">
+		</list>
 	</section>
 </section>

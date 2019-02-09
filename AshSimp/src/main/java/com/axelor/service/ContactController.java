@@ -86,4 +86,18 @@ public class ContactController {
 		    
 		    
 	}
+	
+	@Path("test")
+	@GET
+    
+	public void save() {
+		Contact contact = new Contact();
+		contact.setCname("mukul");
+		contact.setCnumber(123);
+		contact.setId(23);
+		
+		ContactService.addcontact(contact);
+		System.out.println("DONE");
+		
+	}
 }

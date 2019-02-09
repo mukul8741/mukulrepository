@@ -1,0 +1,27 @@
+apply plugin: 'war'
+apply plugin: "eclipse-wtp"
+apply plugin: "eclipse"
+
+repositories {
+     jcenter()
+}
+
+dependencies {
+     compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.4.0.Final'
+   	 compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.0.Final'
+   	
+	compile group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
+		
+	compile 'com.google.inject.extensions:guice-persist:4.2.0'
+	compile group: 'com.google.inject', name: 'guice', version: '4.2.0'
+	
+	compile 'org.jboss.resteasy:resteasy-guice:3.6.0.Final'
+	compile group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version: '3.0.4.Final'
+	compile group: 'org.jboss.resteasy', name: 'resteasy-jaxb-provider', version: '3.0.4.Final'//xml
+	
+	runtime group: 'org.jboss.resteasy', name: 'resteasy-servlet-initializer', version: '3.0.4.Final'
+	
+	compile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+	
+}
+

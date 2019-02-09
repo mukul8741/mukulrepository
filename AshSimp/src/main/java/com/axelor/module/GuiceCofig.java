@@ -25,8 +25,5 @@ public class GuiceCofig extends GuiceResteasyBootstrapServletContextListener{
 		injector.getInstance(PersistService.class).start();
 	}
 	
-	@Override
-	public void contextDestroyed(ServletContextEvent event) {
-		System.out.println("contextDestroyed");
-	}
+	
 }

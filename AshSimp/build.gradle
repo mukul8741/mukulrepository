@@ -20,11 +20,11 @@ dependencies {
 	compile 'com.google.inject.extensions:guice-persist:4.2.0'
 	compile group: 'com.google.inject', name: 'guice', version: '4.2.0'
 	
-	compile 'org.jboss.resteasy:resteasy-guice:3.6.0.Final'
-	compile group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version: '3.0.4.Final'
-	compile group: 'org.jboss.resteasy', name: 'resteasy-jaxb-provider', version: '3.0.4.Final'//xml
+	compile 'org.jboss.resteasy:resteasy-guice:3.6.2.Final'
+	compile group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version: '3.6.0.Final'
+	compile group: 'org.jboss.resteasy', name: 'resteasy-jaxb-provider', version: '3.6.2.Final'//xml
 	
-	runtime group: 'org.jboss.resteasy', name: 'resteasy-servlet-initializer', version: '3.0.4.Final'
+	runtime group: 'org.jboss.resteasy', name: 'resteasy-servlet-initializer', version: '3.6.2.Final'
 	
 	compile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
 	

@@ -6,17 +6,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="filter" key="selection"/>
+		<item value="setAttribute" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="setAttribute"/>
+			<item value="@FormParam"/>
+			<item value="user"/>
+			<item value="3.6.2"/>
 			<item value="servlet"/>
 			<item value="filter"/>
 			<item value="implementation"/>
 			<item value="3.0.4"/>
-			<item value="3.6.2"/>
 			<item value="compile"/>
 			<item value="to("/>
 			<item value="addAnnotated"/>
@@ -24,15 +27,15 @@
 			<item value="AssertionError"/>
 			<item value="mukul"/>
 			<item value="Calculator"/>
-			<item value="calculator"/>
-			<item value="class"/>
 		</list>
 		<list key="replacehistory">
+			<item value="@QueryParam"/>
+			<item value="users"/>
+			<item value="3.0.4"/>
 			<item value="filter"/>
 			<item value="servlet"/>
 			<item value="runtime"/>
 			<item value="3.6.2"/>
-			<item value="3.0.4"/>
 			<item value="implementation"/>
 			<item value="calculator"/>
 			<item value="Calculator"/>

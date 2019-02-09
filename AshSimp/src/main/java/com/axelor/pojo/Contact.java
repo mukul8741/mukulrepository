@@ -1,18 +1,18 @@
 package com.axelor.pojo;
 
-//import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.Id;
-//import javax.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 import com.google.inject.Singleton;
 
-//@Entity
+@Entity
 
 @Singleton
 public class Contact {
 
-//	@Id	
+    @Id	
 //	@GeneratedValue
 	public int id;
 	public String cname;
