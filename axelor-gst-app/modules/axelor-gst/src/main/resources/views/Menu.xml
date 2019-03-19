@@ -1,0 +1,263 @@
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+
+  <menuitem title="AxelorGstApp" name="menu.gst.main"/>
+  
+  <menuitem title="Company" 
+    name="menu.gst.companyHead"
+    parent="menu.gst.main"/>
+    
+  <menuitem title="Company" 
+    name="menu.gst.company"
+    parent="menu.gst.companyHead"
+    action="company.action"/>
+    
+  <menuitem title="BankAccount" 
+    name="menu.gst.bankAccount"
+    parent="menu.gst.companyHead"
+    action="bankAccount.action"/>
+    
+  <menuitem title="Sequence" 
+    name="menu.gst.sequence"
+    parent="menu.gst.companyHead"
+    action="sequence.action"/>
+    
+  <action-view name="company.action" 
+    title="Company" model="com.axelor.gst.db.Company">
+      <view type="grid" name="company-grid"/>
+      <view type="form" name="company-form"/>  
+  </action-view>
+  
+  <action-view name="bankAccount.action" 
+    title="BankAccount" model="com.axelor.gst.db.BankAccount">
+      <view type="grid" name="bankAccount-grid"/>
+      <view type="form" name="bankAccount-form"/>  
+  </action-view>
+  
+  <action-view name="sequence.action" 
+    title="Sequence" model="com.axelor.gst.db.Sequence">
+      <view type="grid" name="sequence-grid"/>
+      <view type="form" name="sequence-form"/>  
+  </action-view>
+  
+  <menuitem title="Party" 
+    name="menu.gst.partyHead"
+    parent="menu.gst.main"/>
+    
+  <menuitem title="Party" 
+    name="menu.gst.party"
+    parent="menu.gst.partyHead"
+    action="party.action"/>
+    
+  <menuitem title="Contact" 
+    name="menu.gst.contact"
+    parent="menu.gst.partyHead"
+    action="contact.action"/>
+    
+  <menuitem title="Configurations" 
+    name="menu.gst.config"
+    parent="menu.gst.partyHead"/>
+    
+  <menuitem title="Address" 
+    name="menu.gst.address"
+    parent="menu.gst.config"
+    action="address.action"/>
+    
+  <menuitem title="City" 
+    name="menu.gst.city"
+    parent="menu.gst.config"
+    action="city.action"/>
+    
+  <menuitem title="State" 
+    name="menu.gst.state"
+    parent="menu.gst.config"
+    action="state.action"/>
+    
+  <menuitem title="Country" 
+    name="menu.gst.country"
+    parent="menu.gst.config"
+    action="country.action"/>
+    
+  <action-view name="party.action"
+    title="Party"
+    model="com.axelor.gst.db.Party">
+     <view type="grid" name="party-grid"/>
+     <view type="form" name="party-form"/>  
+  </action-view>
+  
+  <action-view name="contact.action"
+    title="Contact"
+    model="com.axelor.gst.db.Contact">
+     <view type="grid" name="contact-grid"/>
+     <view type="form" name="contact-form"/>  
+  </action-view>
+  
+  <action-view name="address.action"
+    title="Address"
+    model="com.axelor.gst.db.Address">
+     <view type="grid" name="address-grid"/>
+     <view type="form" name="address-form"/>  
+  </action-view>
+  
+  <action-view name="city.action"
+    title="City"
+    model="com.axelor.gst.db.City">
+     <view type="grid" name="city-grid"/>
+     <view type="form" name="city-form"/>  
+  </action-view>
+  
+  <action-view name="state.action"
+    title="State"
+    model="com.axelor.gst.db.State">
+     <view type="grid" name="state-grid"/>
+     <view type="form" name="state-form"/>  
+  </action-view>
+  
+  <action-view name="country.action"
+    title="Country"
+    model="com.axelor.gst.db.Country">
+     <view type="grid" name="country-grid"/>
+     <view type="form" name="country-form"/>  
+  </action-view>
+  
+  <menuitem title="Product" 
+    name="menu.gst.productHead"
+    parent="menu.gst.main"/>
+    
+  <menuitem title="Product" 
+    name="menu.gst.product"
+    parent="menu.gst.productHead"
+    action="product.action"/>
+    
+  <action-view name="product.action"
+    title="Product"
+    model="com.axelor.gst.db.Product">
+     <view type="grid" name="product-grid"/>
+     <view type="form" name="product-form"/>  
+     <view type="cards" name="product-card"/>
+  </action-view>
+  
+  <menuitem title="Product Category"  
+    name="menu.gst.productCategory"
+    parent="menu.gst.productHead"
+    action="productCategory.action"/>
+    
+  <action-view name="productCategory.action"
+    title="Product Category"
+    model="com.axelor.gst.db.ProductCategory">
+     <view type="grid" name="productCategory-grid"/>
+     <view type="form" name="productCategory-form"/>  
+  </action-view>
+  
+  <menuitem title="Invoice" 
+    name="menu.gst.invoice"
+    parent="menu.gst.main"/>
+    
+  <menuitem title="Create Invoice"
+    name="menu.gst.createInvoice"
+    parent="menu.gst.invoice"
+    action="action.create.invoice"/>
+    
+  <menuitem title="Draft Invoices"
+    name="menu.gst.draftInvoice"
+    parent="menu.gst.invoice"
+    action="action.draft.invoice"/>
+    
+  <menuitem title="Validated Invoices"
+    name="menu.gst.validatedInvoice"
+    parent="menu.gst.invoice"
+    action="action.validated.invoice"/>
+    
+  <menuitem title="Paid Invoices"
+    name="menu.gst.paidInvoice"
+    parent="menu.gst.invoice"
+    action="action.paid.invoice"/>
+    
+  <menuitem title="Cancelled Invoices"
+    name="menu.gst.cancelledInvoice"
+    parent="menu.gst.invoice"
+    action="action.cancelled.invoice"/>
+    
+  <menuitem title="All Invoices"
+    name="menu.gst.allInvoice"
+    parent="menu.gst.invoice"
+    action="action.all.invoice"/>
+    
+  <action-view name="action.create.invoice"
+    title="Create Invoice"
+    model="com.axelor.gst.db.InvoiceMain">
+     <view type="form" name="invoiceMain-form"/> 
+     
+  </action-view>
+  
+  <action-view name="action.draft.invoice"
+    title="Draft Invoice"
+    model="com.axelor.gst.db.InvoiceMain">
+     <view type="grid" name="invoiceMain-grid" />
+     <view type="form" name="invoiceMain-form" /> 
+     <view type="kanban" name="invoiceMain-kanban" />
+     <domain> self.status = :invoice_status</domain>
+     <context name="invoice_status" expr="draft"/>
+  </action-view>
+  
+  <action-view name="action.validated.invoice"
+    title="Validated Invoice"
+    model="com.axelor.gst.db.InvoiceMain">
+     <view type="grid" name="invoiceMain-grid" />
+     <view type="form" name="invoiceMain-form" /> 
+     <view type="kanban" name="invoiceMain-kanban" />
+     <domain> self.status = :invoice_status</domain>
+     <context name="invoice_status" expr="valid"/>
+  </action-view>
+  
+  <action-view name="action.paid.invoice"
+    title="Paid Invoice"
+    model="com.axelor.gst.db.InvoiceMain">
+     <view type="grid" name="invoiceMain-grid" />
+     <view type="form" name="invoiceMain-form" /> 
+     <view type="kanban" name="invoiceMain-kanban" />
+     <domain> self.status = :invoice_status</domain>
+     <context name="invoice_status" expr="paid"/>
+  </action-view>
+  
+  <action-view name="action.cancelled.invoice"
+    title="Cancelled Invoice"
+    model="com.axelor.gst.db.InvoiceMain">
+     <view type="grid" name="invoiceMain-grid" />
+     <view type="form" name="invoiceMain-form" /> 
+     <view type="kanban" name="invoiceMain-kanban" />
+     <domain> self.status = :invoice_status</domain>
+     <context name="invoice_status" expr="cancel"/>
+  </action-view>
+  
+  <action-view name="action.all.invoice"
+    title="All Invoice"
+    model="com.axelor.gst.db.InvoiceMain">
+     <view type="grid" name="invoiceMain-grid" />
+     <view type="form" name="invoiceMain-form" /> 
+     <view type="kanban" name="invoiceMain-kanban" />
+  </action-view>
+  
+  <menuitem title="DashBoard" name="menu.gst.dash.board"
+    parent="menu.gst.main"
+    action="action.dash.board"/>
+    
+  <action-view name="action.dash.board" title="Dash Board">
+   <view type="dashboard" name="dash.board.chart"/>
+  </action-view>
+  
+  <action-view name="action.gst.dash.board.invoice.grid"
+    model="com.axelor.gst.db.InvoiceMain" 
+    title="Older Invoices">
+     <view name="invoiceMain-grid" type="grid"/>
+     <domain>self.datee &lt; :value AND
+             self.status = :Status       
+     </domain>
+     <context name="value" expr="eval:LocalDateTime.now().minusMonths(1)"/>
+     <context name="Status" expr="valid" />
+   </action-view>
+
+  
+</object-views>

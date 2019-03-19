@@ -1,0 +1,13 @@
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.0.xsd">
+
+  <module name="gst" package="com.axelor.gst.db"/>
+  
+  <entity name="ProductCategory" sequential="true" cachable="true">
+    <string name="name" required="true" />
+    <string name="code" required="true" />
+    <decimal name="gstRate" />
+  </entity>
+</domain-models>

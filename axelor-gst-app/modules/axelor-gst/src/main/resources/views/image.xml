@@ -1,0 +1,20 @@
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+  
+  <form model="com.axelor.gst.db.ImageTest" title="ImageTest" name="imageTest-form">
+   <field name="image" widget="image" />
+   <field name="name" />
+  </form>
+  
+  <menuitem title="Image" name="Image"
+            parent="menu.gst.main"
+            action="show.image"/>
+            
+  <action-view name="show.image" title="Image"
+               model="com.axelor.gst.db.ImageTest">
+   <view type="form" name="imageTest-form"/>             
+  </action-view>
+</object-views>
+

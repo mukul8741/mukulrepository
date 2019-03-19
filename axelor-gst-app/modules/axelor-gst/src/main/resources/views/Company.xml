@@ -1,0 +1,73 @@
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+
+  <grid name="company-grid" title="Company" editable="true"
+    model="com.axelor.gst.db.Company"> 
+    <field name="name" />
+    <field name="gstIn" />
+    <field name="address" />
+  </grid>
+  
+  <form name="company-form" title="Company"
+    model="com.axelor.gst.db.Company"> 
+    <panel title = "Overview">
+     <field name="logo" />
+     <field name="name" />
+     <field name="gstIn" />
+     <field name="address" />
+    </panel>
+   
+   <panel>
+     <field name="contact">
+       <viewer>
+        <![CDATA[
+          <contact>
+           <br>
+           <b>Name : </b>{{record.name}}<br>
+           <b>Type : </b>{{record.type}}<br>
+           <b>Emails : </b>{{record.primaryEmail}},{{record.secondaryEmail}}<br>
+           <b>Phone No. : </b>{{record.primaryPhone}},{{record.secondaryPhone}}
+          </contact>
+        ]]>
+       </viewer>
+       
+       <editor>
+        <field name="name" />
+        <field name="type"/>
+        <field name="primaryEmail"/>
+        <field name="secondaryEmail"/>
+        <field name="primaryPhone"/>
+        <field name="secondaryPhone"/>
+       </editor>
+      
+     </field>
+   
+     <field name="bankDetails">
+     <viewer>
+        <![CDATA[
+          <bank>
+           <br>
+           <b>Bank Name : </b>{{record.bank}}<br>
+           <b>Type : </b>{{record.type}}<br>
+           <b>Account no : </b>{{record.accountNo}}<br>
+           <b>IFSC No : </b>{{record.ifsc}}<br>
+           <b>Address : </b>{{record.address}}<br>
+          </bank>
+        ]]>
+       </viewer>
+      <editor>
+        <field name="bank"/>
+        <field name="accountNo"/>
+        <field name="ifsc"/>
+        <field name="type"/>
+        <field name="address"/>
+      </editor>
+     </field>
+   </panel>
+  </form>
+   
+   
+   
+</object-views>

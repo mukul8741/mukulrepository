@@ -1,0 +1,17 @@
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.0.xsd">
+
+  <module name="gst" package="com.axelor.gst.db"/>
+  
+  <entity name="Address" sequential="true" cachable="true">
+    <string name="type" selection="address.type.selection" required="true"/>
+    <string name="line1" required="true" namecolumn="true"/>
+    <string name="line2" />
+    <many-to-one name="city" ref="City" required="true"/>
+    <many-to-one name="state" ref="State" />
+    <many-to-one name="country" ref="Country" required="true" />
+    <string name="pinCode" />
+  </entity>
+</domain-models>

@@ -1,0 +1,53 @@
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+  
+  <grid model="com.axelor.gst.db.Sequence" 
+    title="Sequence" name="sequence-grid">
+     <field name="prefix" />
+     <field name="suffix" />
+     <field name="padding" />
+     <field name="nextNumber" />  
+     <field name="model" />
+  </grid>
+  
+  <form model="com.axelor.gst.db.Sequence"
+    title="Sequence" name="sequence-form">
+    <panel>
+      <field name="prefix" />
+      <field name="suffix" />
+      <field name="padding" onChange="script-action"/>
+      <field name="nextNumber" />  
+      <field name="model" />
+    </panel>
+  </form>
+
+  <action-script name="script-action"
+    model="com.axelor.gst.db.Sequence">
+    <script language="groovy">
+      <![CDATA[
+        
+        Sequence sequence = $request.getContext().asType(Sequence.class);
+        int count = 1;
+        int num = sequence.getPadding();
+        
+        String suffix = "";
+        
+        if(sequence.getSuffix() != null)
+          suffix =  sequence.getSuffix();
+          
+        while(num != 0)
+        {
+            count = count * 10;
+            num--;
+        }
+        
+        String zeros = "" + count;
+              
+        $response.setValue("nextNumber",sequence.getPrefix() + zeros.substring(1) + suffix);
+      ]]>
+    </script>
+      
+  </action-script>
+</object-views>

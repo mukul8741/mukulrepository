@@ -1,0 +1,138 @@
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+  
+  <dashboard title="Dashoard" name="dash.board.chart">
+    <dashlet action="action.gst.dash.board.invoice.grid" colSpan="12"/>
+    <dashlet  action="chart:chart.gst.paid"/>
+    <dashlet  action="chart:chart.gst.unpaid"/>
+    <dashlet  action="chart:chart.customer.per.state"/>
+    <dashlet  action="chart:chart.gst.invoice.per.status"/>
+    <dashlet  action="chart:chart.gst.amount.per.status"/>
+  </dashboard>
+   
+  <chart name="chart.gst.paid" title="Paid Invoices" onInit="action.gst.attrs.paid.chart">
+   <search-fields>
+    <field name="fromDate" type="datetime" title="From" />
+    <field name="toDate" type="datetime" title="To" />
+   </search-fields>
+   <dataset type="jpql">
+    <![CDATA[
+      Select
+        count(self.reference) as Reference,
+         _in.product.name as product,
+         _in.product.category.name as category
+
+      from
+         InvoiceMain self
+      Left Join
+         self.invoiceItems as _in
+      where
+         self.datee >= :fromDate
+         AND self.datee <= :toDate
+         AND self.status = 'paid'
+      group by
+         _in.product.name,
+         _in.product.category.name,
+         self.datee
+       order by
+          self.datee
+
+    ]]></dataset>
+    <category key="product"/>
+    <series key="Reference" groupBy="category" type="bar"/>
+   </chart>
+   
+   <chart name="chart.gst.unpaid" title="UnPaid Invoice" onInit="action.gst.attrs.paid.chart">
+     <search-fields>
+       <field name="fromDate" type="datetime" title="From" />
+       <field name="toDate" type="datetime" title="To" />
+     </search-fields>
+     
+     <dataset type="jpql">
+        <![CDATA[
+        SELECT
+            count(reference) as Reference,
+            _company.name as cName
+        FROM
+            InvoiceMain self
+        LEFT JOIN
+            self.company AS _company
+        WHERE
+            self.datee >= :fromDate
+            AND self.datee <= :toDate
+            AND self.status in ('draft','valid')
+        GROUP BY
+            _company.name
+
+
+      ]]>
+      </dataset>
+      <category key="cName" type="number"/>
+      <series key="Reference" type="pie"/>
+     </chart>
+   
+   <chart name="chart.customer.per.state" title="Customer Per State">
+     <dataset type="jpql">
+      <![CDATA[
+         SELECT 
+             count(self.party.name) as _customer,
+             _ia.state.name as state
+         FROM
+             InvoiceMain self
+         LEFT JOIN
+             self.invoiceAddress as _ia
+         GROUP BY
+             _ia.state.name
+               
+      ]]>
+     </dataset>
+     <category key="state"/>
+     <series key="_customer" type="pie"/>
+   </chart>
+   
+   <chart name="chart.gst.invoice.per.status" title="Invoices">
+    <dataset type="jpql">
+      <![CDATA[
+        SELECT
+            count(self.reference) as Reference,
+            self.status as Status
+        FROM
+            InvoiceMain self
+        
+        GROUP BY
+            self.status
+      ]]>
+    </dataset>
+    <category key="Status"/>
+    <series key="Reference" type="line"/>
+   </chart>
+   
+   <chart name="chart.gst.amount.per.status" title="Amount">
+    <dataset type="jpql">
+      <![CDATA[
+        SELECT
+            sum(self.grossAmount) as Amount,
+            self.status as Status
+        FROM
+            InvoiceMain self
+        
+        GROUP BY
+            self.status
+      ]]>
+    </dataset>
+    <category key="Status"/>
+    <series key="Amount" type="bar"/>
+   </chart>
+   
+   
+   <action-attrs name="action.gst.attrs.paid.chart">
+     <attribute name="value" for="fromDate" expr="eval:__date__.withDayOfMonth(1)"/>
+     <attribute name="value" for="toDate" expr="eval:__datetime__.withDayOfMonth(
+                                                        __datetime__.getMonth().length(LocalDate.now().isLeapYear()))"/>
+                                          
+   </action-attrs>
+  
+   
+</object-views>

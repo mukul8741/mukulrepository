@@ -1,0 +1,495 @@
+/**
+ * Axelor Business Solutions
+ *
+ * Copyright (C) 2005-2017 Axelor (<http://axelor.com>).
+ *
+ * This program is free software: you can redistribute it and/or  modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+[class *= hilite-] > .display-text {
+	color: inherit;
+}
+
+[class *= hilite-].strong,
+[class *= hilite-].strong input:first-of-type,
+[class *= hilite-].strong textarea:first-of-type {
+	font-weight: 600 !important;
+}
+
+.hilite-primary-text,
+.hilite-primary-text input:first-of-type,
+.hilite-primary-text textarea:first-of-type {
+	color: #428bca !important;
+}
+
+.hilite-primary,
+.hilite-primary input:first-of-type,
+.hilite-primary textarea:first-of-type,
+.hilite-primary .slick-cell {
+	color: #fff !important;
+	background-color: #428bca !important;
+}
+
+.hilite-warning-text,
+.hilite-warning-text input:first-of-type,
+.hilite-warning-text textarea:first-of-type {
+	color: #f0ad4e !important;
+}
+
+.hilite-warning,
+.hilite-warning input:first-of-type,
+.hilite-warning textarea:first-of-type,
+.hilite-warning .slick-cell {
+	color: #fff !important;
+	background-color: #f0ad4e !important;
+}
+
+.hilite-success-text,
+.hilite-success-text input:first-of-type,
+.hilite-success-text textarea:first-of-type {
+	color: #5cb85c !important;
+}
+
+.hilite-success,
+.hilite-success input:first-of-type,
+.hilite-success textarea:first-of-type,
+.hilite-success .slick-cell {
+	color: #fff !important;
+	background-color: #5cb85c !important;
+}
+
+.hilite-danger-text,
+.hilite-danger-text input:first-of-type,
+.hilite-danger-text textarea:first-of-type {
+	color: #d9534f !important;
+}
+
+.hilite-danger,
+.hilite-danger input:first-of-type,
+.hilite-danger textarea:first-of-type,
+.hilite-danger .slick-cell {
+	color: #fff !important;
+	background-color: #d9534f !important;
+}
+
+.hilite-error-text,
+.hilite-error-text input:first-of-type,
+.hilite-error-text textarea:first-of-type {
+	color: #b94a48 !important;
+}
+
+.hilite-error,
+.hilite-error input:first-of-type,
+.hilite-error textarea:first-of-type,
+.hilite-error .slick-cell {
+	color: #fff !important;
+	background-color: #b94a48 !important;
+}
+
+.hilite-info-text,
+.hilite-info-text input:first-of-type,
+.hilite-info-text textarea:first-of-type {
+	color: #5bc0de !important;
+}
+
+.hilite-info,
+.hilite-info input:first-of-type,
+.hilite-info textarea:first-of-type,
+.hilite-info .slick-cell {
+	color: #fff !important;
+	background-color: #5bc0de !important;
+}
+
+.hilite-default-text,
+.hilite-default-text input:first-of-type,
+.hilite-default-text textarea:first-of-type {
+
+}
+
+.hilite-default,
+.hilite-default input:first-of-type,
+.hilite-default textarea:first-of-type,
+.hilite-default .slick-cell {
+
+}
+
+.slick-row[class*="hilite-"].selected,
+.slick-row[class*="hilite-"] .slick-cell.selected {
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.2)
+    );
+}
+
+.slick-row[class*="-text"].selected,
+.slick-row[class*="-text"] .slick-cell.selected {
+	background-image: none;
+}
+
+.slickgrid-editable .slick-row[class*="hilite-"].active .slick-cell-editable:before,
+[class*="hilite-"].form-item-container {
+	background-color: inherit !important;
+}
+
+/** other predefined styles */
+
+.form-item label.label-bold,
+.form-item-container.bold,
+.form-item-container.bold input:first-of-type,
+.form-item-container.bold textarea:first-of-type {
+	font-weight: 600 !important;
+}
+
+.form-item label.label-italic,
+.form-item-container.italic,
+.form-item-container.italic input:first-of-type,
+.form-item-container.italic textarea:first-of-type {
+	font-style: italic !important;
+}
+
+.form-item label.label-underline,
+.form-item-container.underline,
+.form-item-container.underline input:first-of-type,
+.form-item-container.underline textarea:first-of-type {
+	text-decoration: underline !important;
+}
+
+.form-item label.label-overline,
+.form-item-container.overline,
+.form-item-container.overline input:first-of-type,
+.form-item-container.overline textarea:first-of-type {
+	text-decoration: overline !important;
+}
+
+.form-item label.label-line-through,
+.form-item-container.line-through,
+.form-item-container.line-through input:first-of-type,
+.form-item-container.line-through textarea:first-of-type {
+	text-decoration: line-through !important;
+}
+
+.form-item label.label-small,
+.form-item-container.small,
+.form-item-container.small input:first-of-type,
+.form-item-container.small textarea:first-of-type {
+	font-size: 10px !important;
+}
+
+.form-item label.label-big,
+.form-item-container.big,
+.form-item-container.big input:first-of-type,
+.form-item-container.big input:first-of-type {
+	font-size: 16px !important;
+}
+
+.form-item label.label-large,
+.form-item-container.large,
+.form-item-container.large input:first-of-type,
+.form-item-container.large textarea:first-of-type {
+	font-size: 18px !important;
+}
+
+.form-item label.label-left,
+.form-item-container.left,
+.form-item-container.left input:first-of-type,
+.form-item-container.left textarea:first-of-type {
+	text-align: left !important;
+}
+
+.form-item label.label-right,
+.form-item-container.right,
+.form-item-container.right input:first-of-type,
+.form-item-container.right textarea:first-of-type {
+	text-align: right !important;
+}
+
+.form-item label.label-center,
+.form-item-container.center,
+.form-item-container.center input:first-of-type,
+.form-item-container.center textarea:first-of-type {
+	text-align: center !important;
+}
+
+.form-item label.label-justify,
+.form-item-container.justify,
+.form-item-container.justify input:first-of-type,
+.form-item-container.justify textarea:first-of-type {
+	text-align: justify !important;
+}
+
+.form-item label.label-red,
+.form-item-container.red,
+.form-item-container.red input:first-of-type,
+.form-item-container.red textarea:first-of-type {
+	color: red !important;
+}
+
+.form-item label.label-blue,
+.form-item-container.blue,
+.form-item-container.blue input:first-of-type,
+.form-item-container.blue textarea:first-of-type {
+	color: blue !important;
+}
+
+.form-item label.label-green,
+.form-item-container.green,
+.form-item-container.green input:first-of-type,
+.form-item-container.green input:first-of-type {
+	color: green !important;
+}
+
+.form-item label.label-muted,
+.form-item-container.muted,
+.form-item-container.muted input:first-of-type,
+.form-item-container.muted textarea:first-of-type {
+	color: #777 !important;
+}
+
+.form-item label.label-primary,
+.form-item-container.primary,
+.form-item-container.primary input:first-of-type,
+.form-item-container.primary textarea:first-of-type {
+	color: #428bca !important;
+}
+
+.form-item label.label-success,
+.form-item-container.success,
+.form-item-container.success input:first-of-type,
+.form-item-container.success textarea:first-of-type {
+	color: #3c763d !important;
+}
+
+.form-item label.label-info,
+.form-item-container.info,
+.form-item-container.info input:first-of-type,
+.form-item-container.info textarea:first-of-type {
+	color: #31708f !important;
+}
+
+.form-item label.label-warning,
+.form-item-container.warning,
+.form-item-container.warning input:first-of-type,
+.form-item-container.warning textarea:first-of-type {
+	color: #8a6d3b !important;
+}
+
+.form-item label.label-danger,
+.form-item-container.danger,
+.form-item-container.danger input:first-of-type,
+.form-item-container.danger textarea:first-of-type {
+	color: #a94442 !important;
+}
+
+.form-item label.label-bg-primary,
+.form-item-container.bg-primary,
+.form-item-container.bg-primary input:first-of-type,
+.form-item-container.bg-primary textarea:first-of-type {
+	color: #fff;
+	background-color: #428bca !important;
+}
+
+.form-item label.label-bg-success,
+.form-item-container.bg-success,
+.form-item-container.bg-success input:first-of-type,
+.form-item-container.bg-success textarea:first-of-type {
+	background-color: #dff0d8 !important;
+}
+
+.form-item label.label-bg-info,
+.form-item-container.bg-info,
+.form-item-container.bg-info input:first-of-type,
+.form-item-container.bg-info textarea:first-of-type {
+	background-color: #d9edf7 !important;
+}
+
+.form-item label.label-bg-warning,
+.form-item-container.bg-warning,
+.form-item-container.bg-warning input:first-of-type,
+.form-item-container.bg-warning textarea:first-of-type {
+	background-color: #fcf8e3 !important;
+}
+
+.form-item label.label-bg-danger,
+.form-item-container.bg-danger,
+.form-item-container.bg-danger input:first-of-type,
+.form-item-container.bg-danger textarea:first-of-type {
+	background-color: #f2dede !important;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+.font-noraml {
+  font-weight: 400;
+}
+
+.bg-red 		{ background-color: #DB2828; }
+.bg-orange 		{ background-color: #F2711C; }
+.bg-yellow 		{ background-color: #FBBD08; }
+.bg-olive 		{ background-color: #B5CC18; }
+.bg-green 		{ background-color: #21BA45; }
+.bg-teal 		{ background-color: #00B5AD; }
+.bg-blue 		{ background-color: #2185D0; }
+.bg-violet 		{ background-color: #6435C9; }
+.bg-purple 		{ background-color: #A333C8; }
+.bg-pink 		{ background-color: #E03997; }
+.bg-brown 		{ background-color: #A5673F; }
+.bg-grey 		{ background-color: #767676; }
+.bg-black 		{ background-color: #1B1C1D; }
+.bg-white		{ background-color: #F9FAFB; }
+
+.fg-red 		{ color: #DB2828; }
+.fg-orange 		{ color: #F2711C; }
+.fg-yellow 		{ color: #B58105; }
+.fg-olive 		{ color: #8ABC1E; }
+.fg-green 		{ color: #1EBC30; }
+.fg-teal 		{ color: #10A3A3; }
+.fg-blue 		{ color: #2185D0; }
+.fg-violet 		{ color: #6435C9; }
+.fg-purple 		{ color: #A333C8; }
+.fg-pink 		{ color: #E03997; }
+.fg-brown 		{ color: #A5673F; }
+.fg-grey 		{ color: #767676; }
+.fg-black 		{ color: #1B1C1D; }
+.fg-white		{ color: #F9FAFB; }
+
+.panel-red .panel .panel-header,
+.panel-red .dashlet .dashlet-header {
+  border-top-color: #DB2828;
+}
+.panel-red.panel .panel-header {
+  border-top-color: #DB2828 !important;
+}
+.panel-red.dashlet .dashlet-header {
+  border-top-color: #DB2828 !important;
+}
+.panel-orange .panel .panel-header,
+.panel-orange .dashlet .dashlet-header {
+  border-top-color: #F2711C;
+}
+.panel-orange.panel .panel-header {
+  border-top-color: #F2711C !important;
+}
+.panel-orange.dashlet .dashlet-header {
+  border-top-color: #F2711C !important;
+}
+.panel-yellow .panel .panel-header,
+.panel-yellow .dashlet .dashlet-header {
+  border-top-color: #FBBD08;
+}
+.panel-yellow.panel .panel-header {
+  border-top-color: #FBBD08 !important;
+}
+.panel-yellow.dashlet .dashlet-header {
+  border-top-color: #FBBD08 !important;
+}
+.panel-olive .panel .panel-header,
+.panel-olive .dashlet .dashlet-header {
+  border-top-color: #B5CC18;
+}
+.panel-olive.panel .panel-header {
+  border-top-color: #B5CC18 !important;
+}
+.panel-olive.dashlet .dashlet-header {
+  border-top-color: #B5CC18 !important;
+}
+.panel-green .panel .panel-header,
+.panel-green .dashlet .dashlet-header {
+  border-top-color: #21BA45;
+}
+.panel-green.panel .panel-header {
+  border-top-color: #21BA45 !important;
+}
+.panel-green.dashlet .dashlet-header {
+  border-top-color: #21BA45 !important;
+}
+.panel-teal .panel .panel-header,
+.panel-teal .dashlet .dashlet-header {
+  border-top-color: #00B5AD;
+}
+.panel-teal.panel .panel-header {
+  border-top-color: #00B5AD !important;
+}
+.panel-teal.dashlet .dashlet-header {
+  border-top-color: #00B5AD !important;
+}
+.panel-blue .panel .panel-header,
+.panel-blue .dashlet .dashlet-header {
+  border-top-color: #2185D0;
+}
+.panel-blue.panel .panel-header {
+  border-top-color: #2185D0 !important;
+}
+.panel-blue.dashlet .dashlet-header {
+  border-top-color: #2185D0 !important;
+}
+.panel-violet .panel .panel-header,
+.panel-violet .dashlet .dashlet-header {
+  border-top-color: #6435C9;
+}
+.panel-violet.panel .panel-header {
+  border-top-color: #6435C9 !important;
+}
+.panel-violet.dashlet .dashlet-header {
+  border-top-color: #6435C9 !important;
+}
+.panel-purple .panel .panel-header,
+.panel-purple .dashlet .dashlet-header {
+  border-top-color: #A333C8;
+}
+.panel-purple.panel .panel-header {
+  border-top-color: #A333C8 !important;
+}
+.panel-purple.dashlet .dashlet-header {
+  border-top-color: #A333C8 !important;
+}
+.panel-pink .panel .panel-header,
+.panel-pink .dashlet .dashlet-header {
+  border-top-color: #E03997;
+}
+.panel-pink.panel .panel-header {
+  border-top-color: #E03997 !important;
+}
+.panel-pink.dashlet .dashlet-header {
+  border-top-color: #E03997 !important;
+}
+.panel-brown .panel .panel-header,
+.panel-brown .dashlet .dashlet-header {
+  border-top-color: #A5673F;
+}
+.panel-brown.panel .panel-header {
+  border-top-color: #A5673F !important;
+}
+.panel-brown.dashlet .dashlet-header {
+  border-top-color: #A5673F !important;
+}
+.panel-grey .panel .panel-header,
+.panel-grey .dashlet .dashlet-header {
+  border-top-color: #767676;
+}
+.panel-grey.panel .panel-header {
+  border-top-color: #767676 !important;
+}
+.panel-grey.dashlet .dashlet-header {
+  border-top-color: #767676 !important;
+}
+.panel-black .panel .panel-header,
+.panel-black .dashlet .dashlet-header {
+  border-top-color: #1B1C1D;
+}
+.panel-black.panel .panel-header {
+  border-top-color: #1B1C1D !important;
+}
+.panel-black.dashlet .dashlet-header {
+  border-top-color: #1B1C1D !important;
+}

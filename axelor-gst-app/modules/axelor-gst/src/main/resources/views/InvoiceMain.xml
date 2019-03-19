@@ -1,0 +1,243 @@
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+  
+  <selection name="invoice.main.status.selection" >
+    <option value="draft" >Draft</option>
+    <option value="valid">Valid</option>
+    <option value="paid">Paid</option>
+    <option value="cancel">Cancel</option>
+  </selection>
+  
+  <grid model="com.axelor.gst.db.InvoiceMain"
+    title="Invoice" name="invoiceMain-grid">
+     <toolbar>
+      <button name="btnPrint" icon="fa-print" title="Print" onClick="action.print.report"/>
+     </toolbar>
+     
+     <field name="status" readonly="true"/>
+     <field name="company" required="true" />
+     <field name="reference" readonly="true" />
+     <field name="datee" />
+     <field name="priority" />
+     <field name="party" />
+     <field name="partyContact" />
+     <field name="invoiceAddress" />
+     <field name="shippingAddress" hidden="true"/>
+     <field name="useInvoiceAddress" />
+     <field name="netAmount" />
+     <field name="netIgst" />
+     <field name="netCgst" />
+     <field name="netSgst" />
+     <field name="grossAmount" />
+  </grid>
+  
+  <form model="com.axelor.gst.db.InvoiceMain"
+    title="Invoice" name="invoiceMain-form" onNew="action.gst.create.invoice1,
+                                                   action.gst.onNew.attr.set.buttons,
+                                                   action.gst.set.date"
+                                                   
+                                                  
+    onLoad="action.gst.onLoad.attr.set.buttons"
+    onSave="action.gst.onSave.use.invoice.status">
+    
+     <toolbar>
+      <button name="btnPrint" icon="fa-print" title="Print" onClick="action.print.report"/>
+     </toolbar>
+     
+     <panel>
+       <panel colSpan="8" itemSpan="12">
+         <field name="status" readonly="true" widget="nav-select" default="draft"/>
+       </panel>
+  
+       <panel colSpan="4" itemSpan="12">
+         <button name="Validate" title="Valid" onClick="action.status.validate,
+                                                          action.invoiceMainSequence.method,
+                                                          action.gst.onLoad.attr.set.buttons,
+                                                          save"   hidden="true" />
+         <button name="Paid" title="Paid" onClick="action.status.paid,
+                                                      action.gst.onLoad.attr.set.buttons,
+                                                      save"  hidden="true"/>
+         <button name="Cancel" title="Cancel" onClick="action.status.cancel,
+                                                         action.gst.onLoad.attr.set.buttons,
+                                                         save"/>
+       </panel>
+     </panel>
+     
+     <panel>
+      <field name="company" required="true" onChange="action.gst.attrs.part.compant.onChange"/>
+      <field name="reference" readonly="true" />
+      <field name="datee" />
+      <field name="priority" />
+      <field name="party" onChange="action.invoice.main.method,action.gst.method.set.context,action.gst.attrs.part.compant.onChange"/>
+      <field name="partyContact" domain="self.id in :partyId" />
+      <field name="invoiceAddress" domain="self.id in :iAddress"/>
+      <field name="shippingAddress" hidden="false" domain="self.id in :sAddress"/>
+      <field name="toHoldValueOfShippingAdd" hidden="true" />
+      <field name="useInvoiceAddress" onChange="action.invoice.shipping.add.status" />
+      <field name="netAmount" />
+      <field name="netIgst" />
+      <field name="netCgst" />
+      <field name="netSgst" />
+      <field name="grossAmount" />
+      
+     </panel>
+     
+     <panel-related field="invoiceItems" onChange="action.invoiceMainInvoice.method" >
+       <field name="product" />
+       <field name="hsbn" />
+       <field name="item" />
+       <field name="quantity" />
+       <field name="price" />
+       <field name="netAmount" />
+       <field name="gstRate" />
+       <field name="igst" />
+       <field name="sgst" />
+       <field name="cgst" />
+       <field name="grossAmount" />
+     </panel-related>
+     
+  </form>
+  
+  <kanban name="invoiceMain-kanban" sequenceBy="priority"
+    model="com.axelor.gst.db.InvoiceMain" 
+    title="Invoice" columnBy="status">
+    
+     <toolbar>
+      <button name="btnPrint" icon="fa-print" title="Print" onClick="action.print.report"/>
+     </toolbar>
+     
+     <field name="status" readonly="true" />
+     <field name="reference" readonly="true" />
+     <field name="priority" />
+     <field name="datee"/>
+     <field name="partyContact" />
+     <field name="invoiceAddress" />
+     <field name="shippingAddress" hidden="true"/>
+     <field name="useInvoiceAddress" onChange="action.invoice.shipping.add.status" />
+     <field name="netAmount" />
+     <field name="netIgst" />
+     <field name="netCgst" />
+     <field name="netSgst" />
+     <field name="grossAmount" />
+     <template><![CDATA[
+     <div>
+       <h4>{{status}}</h4>
+       <h4>{{reference}}</h4>
+       <h4>{{partyContact.name}}</h4>
+     </div> 
+     
+     <div class="card-footer">
+       <i class='fa fa-clock-o'></i> <span>{{datee|date:'yyyy-MM-dd HH:mm:ss'}}</span>
+     </div>
+     <div>
+       <h4>{{invoiceAddress.line1}}</h4>     
+       <h4>{{shippingAddress.line1}}</h4>
+       <h4>{{useInvoiceAddress}}</h4>
+     </div>
+     
+     <div>
+       <h4>{{netAmount}}</h4>
+       <h4>{{netIgst}}</h4>
+       <h4>{{netCgst}}</h4>
+       <h4>{{netSgst}}</h4>
+       <h4>{{grossAmount}}</h4>
+     </div>
+     ]]></template>
+  </kanban>
+  
+  <action-method name="action.invoiceMainSequence.method">
+     <call class="com.axelor.gst.controller.SequenceController" method="invoiceCreateSequence"/>
+  </action-method>
+  
+  <action-method name="action.invoiceMainInvoice.method">
+     <call class="com.axelor.gst.controller.SequenceController" method="invoiceDataCalculate"/>
+  </action-method>
+  
+  <action-method name="action.invoice.main.method">
+     <call class="com.axelor.gst.controller.SequenceController" method="partyOnChangeEvent"/>
+  </action-method>
+  
+  <action-record name="action.gst.set.date"
+    model="com.axelor.gst.db.InvoiceMain">
+     <field name="datee" expr="eval:__datetime__"/>  
+  </action-record>
+  
+  <action-attrs name="action.invoice.shipping.add.status">
+    <attribute name="hidden" for="shippingAddress" expr="eval:useInvoiceAddress"/>
+  </action-attrs>
+  
+  <action-record name="action.status.draft"
+    model="com.axelor.gst.db.InvoiceMain">
+     <field name="status" expr="draft"/> 
+  </action-record>
+  
+  <action-record name="action.status.validate"
+    model="com.axelor.gst.db.InvoiceMain">
+     <field name="status" expr="valid" if="eval:netAmount != 0.0"/> 
+  </action-record>
+  
+  <action-record name="action.status.paid"
+    model="com.axelor.gst.db.InvoiceMain">
+     <field name="status" expr="paid"/> 
+  </action-record>
+  
+  <action-record name="action.status.cancel"
+    model="com.axelor.gst.db.InvoiceMain">
+     <field name="status" expr="cancel"/> 
+  </action-record>
+  
+  <action-attrs name="action.gst.onNew.attr.set.buttons">
+    <attribute name="hidden" for="Validate" expr="true"/>
+    <attribute name="hidden" for="Paid" expr="true"/>
+    <attribute name="hidden" for="Cancle" expr="true"/>
+  </action-attrs>
+  
+  <action-attrs name="action.gst.attrs.part.compant.onChange">
+    <attribute name="hidden" for="Validate" expr="false" if="company != null &amp;&amp; party != null &amp;&amp; status=='draft'"/>
+  </action-attrs>
+  
+   <action-attrs name="action.gst.onLoad.attr.set.buttons">
+     <attribute name="hidden" for="Validate" expr="false" if="eval:status=='draft'"/>
+     <attribute name="hidden" for="Paid" expr="true" if="eval:status=='draft'"/>
+     <attribute name="hidden" for="Validate" expr="true" if="eval:status=='valid'"/>
+     <attribute name="hidden" for="Paid" expr="false" if="eval:status=='valid'"/>
+     <attribute name="hidden" for="Validate" expr="true" if="eval:status=='paid'"/>
+     <attribute name="hidden" for="Paid" expr="true" if="eval:status=='paid'"/>
+     <attribute name="hidden" for="shippingAddress" expr="false"/>
+     <attribute name="hidden" for="Cancel" expr="true" if="eval:status=='paid'"/>
+     <attribute name="hidden" for="Cancel" expr="true" if="eval:status=='camcel'"/>
+   </action-attrs>
+   
+   <action-attrs name="action.gst.onSave.use.invoice.status">
+     <attribute name="value" for="shippingAddress" expr="eval:invoiceAddress" if="eval:useInvoiceAddress"/>
+   </action-attrs>
+   
+   <action-report output="report-${date}${time}" 
+              name="action.print.report" 
+              design="gst.report.rptdesign"
+              format="pdf">
+    <param name="invoiceId" expr="eval:id"/>
+   </action-report>
+   
+   <action-method name="action.gst.create.invoice1">
+     <call class="com.axelor.gst.controller.SequenceController" method="mainCreateInvoiceFromProduct"/>
+   </action-method>
+   
+   <action-validate name="action.gst.validate.check.address">
+     <error message="Please Select Party First" if="eval:party == null"/>
+   </action-validate>
+   
+   <action-attrs name="action.gst.domain">
+     <attribute name="domain" for="invoiceAddress" expr=""/>
+   </action-attrs>
+   
+   <action-attrs name="action.attrs.set.valid.button">
+    <attribute name="hidden" for="Validate" expr="eval:invoiceItems != null"/>
+   </action-attrs>
+    
+   <action-method name="action.gst.method.set.context">
+    <call class="com.axelor.gst.controller.SequenceController" method="setContext"/>
+   </action-method>
+  </object-views>

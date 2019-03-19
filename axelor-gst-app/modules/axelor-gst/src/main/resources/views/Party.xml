@@ -1,0 +1,86 @@
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+  
+  <selection name="party.type.selection">
+    <option value="individual">Individual</option>
+    <option value="company">Company</option>
+  </selection>
+
+  <grid model="com.axelor.gst.db.Party"
+    title="Party" name="party-grid">
+     <field name="reference" />
+     <field name="name" />
+     <field name="type" />
+     <field name="customer" />
+     <field name="supplier" />
+     <field name="gstIn" />
+  </grid>
+  
+  <form model="com.axelor.gst.db.Party" 
+    title="Party" name="party-form"
+    onSave="action-party-reference">
+    <panel>
+     <field name="reference" />
+     <field name="name" />
+     <field name="type" />
+     <field name="customer" />
+     <field name="supplier" />
+     <field name="gstIn" />
+    </panel>
+
+    <panel>
+      <field name="contact">
+      <viewer>
+        <![CDATA[
+          <contact>
+           <br>
+           <b>Name : </b>{{record.name}}<br>
+           <b>Type : </b>{{record.type}}<br>
+           <b>Emails : </b>{{record.primaryEmail}},{{record.secondaryEmail}}<br>
+           <b>Phone No. : </b>{{record.primaryPhone}},{{record.secondaryPhone}}
+          </contact>
+        ]]>
+       </viewer>
+      <editor>
+        <field name="name" />
+        <field name="type"/>
+        <field name="primaryEmail"/>
+        <field name="secondaryEmail"/>
+        <field name="primaryPhone"/>
+        <field name="secondaryPhone"/>
+      </editor>
+      </field>
+      
+      <field name="address">
+      <viewer>
+        <![CDATA[
+          <address>
+           <br>
+           <b>Type : </b>{{record.type}}<br>
+           <b>Address : </b>{{record.line1}},{{line2}}<br>
+           <b>PinCode : </b>{{record.pinCode}}
+          </address>
+        ]]>
+       </viewer>
+       <editor>
+        <field name="type" />
+        <field name="line1" />
+        <field name="line2" />
+        <field name="city" onChange="action.gst.records.set.address"/>
+        <field name="state"/>
+        <field name="country"/>
+        <field name="pinCode" />
+       </editor>
+      </field>
+      
+     </panel>
+   </form>
+   
+   <action-method name="action-party-reference">
+     <call class="com.axelor.gst.controller.SequenceController" method="partyCreateSequence"/>
+   </action-method>
+   
+   
+</object-views>

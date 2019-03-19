@@ -1,0 +1,97 @@
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+  
+  <grid model="com.axelor.gst.db.Product"
+    title="Product" name="product-grid" >
+    <toolbar>
+      <button name="btnPrint" icon="fa-print" title="Print" onClick="action.print.product.grid.report"/>
+      <button name="createInvoice" title="Invoice" onClick="action.create.invoice.from.product"/>
+    </toolbar>
+     <field name="name" />
+     <field name="code" />
+     <field name="hsbn" />
+     <field name="category" />
+     <field name="salePrice" />
+     <field name="costPrice" />
+     <field name="gstRate" />
+  </grid>
+  
+  <form model="com.axelor.gst.db.Product"
+    title="Product" name="product-form">
+    
+    <toolbar>
+      <button name="btnPrint" icon="fa-print" title="Print" onClick="action.print.product.report"/>
+    </toolbar>
+    
+    <panel>
+     <field name="image" widget="Image"/>
+     <field name="name" />
+     <field name="code" />
+     <field name="hsbn" />
+     <field name="category" onChange="action-gst-product-gst-rate"/>
+     <field name="salePrice" />
+     <field name="costPrice" />
+     <field name="gstRate" />
+    </panel>
+  </form>
+  
+  <cards name="product-card" title="Product"
+    model="com.axelor.gst.db.Product" orderBy="fullName">
+     <field name="image" />
+     <field name="name" />
+     <field name="code" />
+     <field name="hsbn" />
+     <field name="category" />
+     <field name="salePrice" />
+     <field name="costPrice" />
+     <field name="gstRate" />
+     <template><![CDATA[
+     <div class="span4 card-image">
+       <img ng-if="image" ng-src="{{$image(null, 'image')}}">
+       <img ng-if="!image" src="img/user.png">
+       <strong>{{name}}</strong>
+       <strong>{{code}}</strong>
+       <strong>{{hsbn}}</strong>
+       <strong>{{category.name}}</strong>
+       <strong>{{salePrice}}</strong>
+       <strong>{{costPrice}}</strong>
+       <strong>{{gstRate}}</strong>
+     </div>
+    
+     ]]></template>
+   </cards>
+   
+   <action-record name="action-gst-product-gst-rate"
+     model="com.axelor.gst.db.Product" >
+      <field name="gstRate" expr="eval:category.getGstRate()"/>  
+   </action-record>
+   
+  <action-view name="action.create.invoice.from.product"
+    title="Create Invoice"
+    model="com.axelor.gst.db.InvoiceMain">
+     <view type="form" name="invoiceMain-form"/> 
+     <context name="_ids" expr="eval:_ids"/> 
+  </action-view>
+   
+   <action-report output="product-${date}:${time}"
+                  name="action.print.product.report" 
+                  design="product.rptdesign"
+                  format="pdf">
+   <param name="proId" expr="eval:id.toString()"/>
+   </action-report>
+   
+   <action-report output="product-${date}:${time}"
+                  name="action.print.product.grid.report" 
+                  design="product.rptdesign"
+                  format="pdf">
+   <param name="proId" expr="eval:_ids.toString()"/>
+   </action-report>
+   
+   <action-method name="action.method.set.id.to.context">
+     <call class="com.axelor.gst.controller.SequenceController" method="productReportSetContext"/>
+   </action-method>
+   
+
+</object-views>
